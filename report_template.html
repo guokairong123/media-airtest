@@ -37,7 +37,7 @@
         {% for r in results %}
         <tr width="600">
             <!-标黄色的需要自定义的内容->
-            <td class='details-col-elapsed'><a href="file:///Users/guokairong/Downloads/airtest/log/{{r.name}}/log.html" target="view_window">{{r.name}}</a></td>
+            <td class='details-col-elapsed'><a href="file:///Users/guokairong/Downloads/media-airtest/log/{{r.name}}/log.html" target="view_window">{{r.name}}</a></td>
             <td class="{{'success' if r.result else 'fail'}}">{{"成功" if r.result else "失败"}}</td>
         </tr>
         {% endfor %}
