@@ -43,7 +43,7 @@ poco("android.widget.FrameLayout").offspring("com.tencent.mobileqq:id/dialogLeft
 search("ico_share_wechat").click()
 sleep(2)
 if poco("com.tencent.mm:id/d5n").exists():
-    assert_exists(Template(r"tpl1626166204584.png", record_pos=(-0.09, -0.607), resolution=(720, 1280)),"微信账号未登录")
+    assert_exists(Template(r"tpl1626166204584.png", record_pos=(-0.09, -0.607), resolution=(720, 1280)), "微信账号未登录")
     poco("com.tencent.mm:id/dn").click()
 else:       
     poco("com.tencent.mm:id/gbv").wait_for_appearance(timeout=20)

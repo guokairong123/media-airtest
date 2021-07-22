@@ -22,7 +22,7 @@ class Start(AirtestCase):
         print("test teardown")
         super(Start, self).tearDown()
 
-    def run(self, root_dir="/Users/guokairong/Downloads/media-airtest", device=['Android://127.0.0.1:5037/37KNW18706002708']):
+    def run(self, root_dir="/Users/guokairong/Downloads/media-airtest", device=['Android://127.0.0.1:5037/emulator-5554']):
         # 聚合报告存储
         results = []
         args = []
@@ -91,6 +91,6 @@ class Start(AirtestCase):
 if __name__ == '__main__':
     test = Start()
     # 连接的设备
-    device = ['Android://127.0.0.1:5037/37KNW18706002708']
+    device = ['Android://127.0.0.1:5037/emulator-5554']
     # 项目根目录
     test.run('/Users/guokairong/Downloads/media-airtest', device)

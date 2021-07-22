@@ -8,9 +8,12 @@ from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 
 
-poco(text="直播").click()
+poco(text="视听").click()
 sleep(2)
-assert_exists(Template(r"tpl1625475476419.png", record_pos=(0.001, -0.76), resolution=(720, 1280)), "切换tab")
+try:
+    assert_exists(Template(r"tpl1626944974598.png", record_pos=(0.015, -0.764), resolution=(720, 1280)), "切换tab")
+except:
+    log("切换tab失败")
 
 
 sleep(2)
