@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>Airtest Report </title>
+    
+    <!--[if lt IE 9]>
+    <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/css/report.css" rel="stylesheet">
+
+    <script src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/js/jquery-1.10.2.min.js"></script>
+    <script src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/js/langpack/zh_CN.js" charset="utf-8" type="text/javascript"></script>
+    <script src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/js/lazyload.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript">
+      data = {"steps": [{"title": "start_app", "time": 1626946561.843433, "code": {"name": "start_app", "args": [{"key": "package", "value": "com.touchtv.leizhou"}, {"key": "activity", "value": null}]}, "screen": null, "desc": null, "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1626946563.847132, "code": {"name": "sleep", "args": [{"key": "secs", "value": 2}]}, "screen": null, "desc": "Wait for 2 seconds", "traceback": "", "log": "", "assert": null}, {"title": "record_ui", "time": 1626946563.9128242, "code": {"name": "record_ui", "args": [{"key": "driver", "value": "{poco.drivers.android.uiautomation.AndroidUiautomationPoco object at 0x1179e94a8}"}, {"key": "action", "value": "'click'"}, {"key": "ui", "value": "UIObjectProxy of \"text=\u6d4b\u8bd5\u670d\u52a1\u5668\""}, {"key": "args", "value": "[0.5, 0.2703125]"}]}, "screen": null, "desc": null, "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1626946565.393491, "code": {"name": "touch", "args": [{"key": "v", "value": [360.0, 346.0]}, {"key": "kwargs", "value": {"duration": 0.01}}, {"key": "times", "value": 1}]}, "screen": {"src": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946564964.jpg", "rect": [], "pos": [[360.0, 346.0]], "vector": [], "confidence": null, "resolution": [720, 1280], "_filepath": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946564964.jpg", "thumbnail": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946564964_small.jpg"}, "desc": "Touch coordinates [360.0, 346.0]", "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1626946569.105984, "code": {"name": "sleep", "args": [{"key": "secs", "value": 2}]}, "screen": null, "desc": "Wait for 2 seconds", "traceback": "", "log": "", "assert": null}, {"title": "Exists", "time": 1626946572.931526, "code": {"name": "exists", "args": [{"key": "v", "value": {"filename": "tpl1625825932212.png", "_filepath": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air/tpl1625825932212.png", "threshold": 0.7, "target_pos": 5, "record_pos": [-0.017, -0.083], "resolution": [1080, 2280], "rgb": false, "__class__": "Template"}, "image": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air/tpl1625825932212.png", "resolution": [788, 183]}]}, "screen": {"src": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946572916.jpg", "rect": [], "pos": [], "vector": [], "confidence": null, "resolution": [720, 1280], "_filepath": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946572916.jpg", "thumbnail": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946572916_small.jpg"}, "desc": "Image not exists", "traceback": "", "log": "", "assert": null}, {"title": "Assert not exists", "time": 1626946576.585182, "code": {"name": "assert_not_exists", "args": [{"key": "v", "value": {"filename": "tpl1625825932212.png", "_filepath": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air/tpl1625825932212.png", "threshold": 0.7, "target_pos": 5, "record_pos": [-0.017, -0.083], "resolution": [1080, 2280], "rgb": false, "__class__": "Template"}, "image": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air/tpl1625825932212.png", "resolution": [788, 183]}, {"key": "msg", "value": "\u7f51\u7edc\u6b63\u5e38"}]}, "screen": {"src": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946576570.jpg", "rect": [], "pos": [], "vector": [], "confidence": null, "resolution": [720, 1280], "_filepath": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946576570.jpg", "thumbnail": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946576570_small.jpg"}, "desc": "Assert target image does not exists", "traceback": "", "log": "", "assert": "\u7f51\u7edc\u6b63\u5e38"}, {"title": "record_ui", "time": 1626946576.598857, "code": {"name": "record_ui", "args": [{"key": "driver", "value": "{poco.drivers.android.uiautomation.AndroidUiautomationPoco object at 0x1179e94a8}"}, {"key": "action", "value": "'click'"}, {"key": "ui", "value": "UIObjectProxy of \"com.touchtv.leizhou:id/circleProgressbar\""}, {"key": "args", "value": "[0.8819444444444444, 0.065625]"}]}, "screen": null, "desc": null, "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1626946576.893434, "code": {"name": "touch", "args": [{"key": "v", "value": [635.0, 84.0]}, {"key": "kwargs", "value": {"duration": 0.01}}, {"key": "times", "value": 1}]}, "screen": {"src": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946576688.jpg", "rect": [], "pos": [[635.0, 84.0]], "vector": [], "confidence": null, "resolution": [720, 1280], "_filepath": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946576688.jpg", "thumbnail": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946576688_small.jpg"}, "desc": "Touch coordinates [635.0, 84.0]", "traceback": "", "log": "", "assert": null}, {"title": "Assert exists", "time": 1626946578.867136, "code": {"name": "assert_exists", "args": [{"key": "v", "value": {"filename": "tpl1625473069594.png", "_filepath": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air/tpl1625473069594.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.011, -0.76], "resolution": [720, 1280], "rgb": false, "__class__": "Template"}, "image": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air/tpl1625473069594.png", "resolution": [223, 72]}, {"key": "msg", "value": "\u8fdb\u5165\u9996\u9875"}]}, "screen": {"src": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946578851.jpg", "rect": [{"left": 256, "top": 57, "width": 222, "height": 70}], "pos": [[367, 92]], "vector": [], "confidence": 0.8778717815876007, "resolution": [720, 1280], "_filepath": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946578851.jpg", "thumbnail": "/Users/guokairong/Downloads/media-airtest/log/StartApp-1/1626946578851_small.jpg"}, "desc": "Assert target image exists", "traceback": "", "log": "", "assert": "\u8fdb\u5165\u9996\u9875"}], "name": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air", "scale": 0.5, "test_result": true, "run_end": 1626946578.867136, "run_start": 1626946561.57618, "static_root": "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/", "lang": "en", "records": [], "info": {"name": "StartApp-1.air", "path": "/Users/guokairong/Downloads/media-airtest/StartApp-1.air/StartApp-1.py", "author": "guokairong", "title": "", "desc": ""}, "log": "log.txt", "console": ""};
+      lang = new Lang();
+      lang.init({
+        defaultLang: 'en',
+        currentLang: 'en'
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div id="main" class="main col-md-12">
+          <div id="back_multi"></div>
+          <h1 class="title">Airtest Report </h1>
+          
+          <div class="summary" >
+
+            <div class="show-horizontal">
+              <div class="info info1">
+                <div class="info-left">
+                  <img id='result-img' />
+                </div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Airtest Report</span>
+                    <label id='result-desc' lang="en"></label>
+                  </div>
+                  <div class="info-content">
+                    <div class='info-sub start'></div>
+                    <div class='info-sub time'></div>
+                  </div>
+                  <div class="info-toal">
+                    <div class="info-step">
+                      <span class="info-name" lang="en">Steps: </span>
+                      <span class="info-value">10</span>
+                    </div>
+                    <div class="info-time">
+                      <span class="info-name" lang="en">Time: </span>
+                      <span class="info-value duration">xxx</span>
+                    </div>
+                    
+                    
+                    <div class="info-log">
+                      <span class="info-name" lang="en">Log: </span>
+                      <span class="info-value log">
+                        <a href="log.txt" target="_blank" download="log.txt">log.txt <img src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/download_log.svg" /></a>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="info info2">
+                <div class="info-left"></div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Executors</span></div>
+                  <div class="info-content">
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      
+                        <div class="info-name"><span lang="en">Author:</span> guokairong</div>
+                      
+                    </div>
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      <div class="info-file" title="/Users/guokairong/Downloads/media-airtest/StartApp-1.air/StartApp-1.py">StartApp-1.air
+                        <img id="copy_path" path="/Users/guokairong/Downloads/media-airtest/StartApp-1.air/StartApp-1.py" title="copy file path to clipboard" src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/copy.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          <div class="device" id='device'>
+          </div>
+          <!-- 可以额外显示自定义模块，支持插入Html内容 -->
+          
+          <div class="gallery">
+            <div class="info-title"><span lang="en">Quick view</span></div>
+            <div class="content">
+            </div>
+          </div>
+
+          <!--单步-->
+          
+          
+          <div class="steps">
+            <div class="content">
+              <div class="steps-head">
+                <div class="head-left">
+                  <div class="order" id='order'><span lang="en">order</span></div>
+                  <div class="order" id='duration'><span lang="en">duration</span></div>
+                  <div class="order" id='status'><span lang="en">status</span></div>
+                </div>
+                <div class="head-right">
+                  <span lang="en" class="jump-wrong" id='jump-wrong'>Jump to wrong step</span>
+                  <span lang="en">Filter by:</span>
+                  <span class="filters">
+                    <span lang="en" class="filter" id="all" alt="show all steps">All</span>
+                    <span lang="en" class="filter" id='success' alt="show success steps only">Success</span>
+                    <span lang="en" class="filter" id='fail' alt="show failed steps only">Failed</span>
+                    <span lang="en" class="filter" id="assert" alt="show steps with assertion only">Assert</span>
+                  </span>
+                </div>
+              </div>
+              <div class="steps-content">
+                <div class="step-left" id='step-left'>
+                  <div class="step-list"></div>
+                  <div id="pageTool"></div>
+                </div>
+                <div class="step-right" id='step-right'></div>
+              </div>
+            </div>
+            
+            </div>
+        </div>
+        
+      
+      <div class="footer">
+        <div class="footer-content">
+          <div class="foo">
+            <div class="interfaces">
+              <a class="icon" href="https://github.com/AirtestProject/Airtest"  target="_blank">
+                <img src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/Airtest.png" alt="airtest">
+              </a>
+              <a class="icon" href="https://github.com/AirtestProject/poco"  target="_blank">
+                <img src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/poco.png" alt="Poco">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="apps">
+              <a class="icon ide" href="http://airtest.netease.com/"  target="_blank">
+                <img src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/AirtestIDE.png" alt="AirtestIDE">
+              </a>
+              <a class="icon" href="https://airlab.163.com/"  target="_blank">
+                <img src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/AirLab.png" alt="AirLab">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="corp">
+                <img src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/netease.png" alt="NetEase">
+                <span lang="en">© 1997 - 2020 NetEase, Inc. All Rights Reserved.</span>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+      </div>
+      <!-- 录屏 -->
+      <div class="row gif-wrap show">
+          <div class="menu">
+            <div class="pattern pattern1">
+              <div class="minimize">
+                <img title="minimize" src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/minimize.svg" />
+              </div>
+              <div class="close">
+                <img title="close" src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/close.svg" />
+              </div>
+            </div>
+            <div class="pattern pattern2">
+              <div class="maximize">
+                <img title="maximize" src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/image/maximize.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            
+          </div>
+        </div>
+        <!-- max pic -->
+      <div id='magnify' class="mask hide">
+        <div class="content">
+        </div>
+      </div>
+    </div>
+
+  <link href="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/css/monokai_sublime.min.css" rel="stylesheet">
+  <script src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/js/highlight.min.js"></script>
+  <script type="text/javascript" src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/js/paging.js"></script>
+  <script src="/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/airtest/report/js/report.js"></script>
+</body>
+</html>
