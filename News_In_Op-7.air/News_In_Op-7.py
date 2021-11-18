@@ -33,8 +33,7 @@ try:
 except:
     pass
 
-poco("com.touchtv.leizhou:id/back").click()
-
+keyevent("KEYCODE_BACK")
 # 直播
 search("732643").click()
 sleep(5)
@@ -43,12 +42,13 @@ try:
 except:
     pass
 
-if poco("com.touchtv.leizhou:id/ibBack").exists():
-    poco("com.touchtv.leizhou:id/ibBack").click()
-else:
-    sleep(2)
-    poco("com.touchtv.leizhou:id/backgroud_img").click()
-    poco("com.touchtv.leizhou:id/ibBack").click()
+# if poco(sys.argv[1]+":id/ibBack").exists():
+#     poco(sys.argv[1]+":id/ibBack").click()
+# else:
+#     sleep(2)
+#     poco(sys.argv[1]+":id/backgroud_img").click()
+#     poco(sys.argv[1]+":id/ibBack").click()
+keyevent("KEYCODE_BACK")
 
 # 跳转百度
 search("www.baidu").click()
@@ -58,7 +58,7 @@ try:
 except:
     pass
 
-poco("com.touchtv.leizhou:id/ivGoBack").click()
+keyevent("KEYCODE_BACK")
 
 # 文章内视频播放
 end_pt1 = (width*0.5, height*0.4)
@@ -96,14 +96,14 @@ try:
     assert_exists(Template(r"tpl1625474398855.png", record_pos=(0.008, 0.003), resolution=(720, 1280)), "文字链接-图文")
 except:
     pass
-poco("android.widget.ImageView").click()
+keyevent("KEYCODE_BACK")
 search("直播").click()
 sleep(2)
 try:
     assert_exists(Template(r"tpl1615172446749.png", record_pos=(0.022, -0.244), resolution=(720, 1280)), "文字链接-直播")
 except:
     pass
-poco("com.touchtv.leizhou:id/ib_back").click()
+keyevent("KEYCODE_BACK")
 
 search("百度").click()
 sleep(2)
@@ -111,5 +111,5 @@ try:
     assert_exists(Template(r"tpl1625624366387.png", record_pos=(-0.015, -0.542), resolution=(720, 1280)), "文字链接-外链")
 except:
     pass
-poco("com.touchtv.leizhou:id/btn_back").click()
+keyevent("KEYCODE_BACK")
 poco.stop_running()

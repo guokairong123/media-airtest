@@ -1,6 +1,8 @@
 # -*- encoding=utf8 -*-
 __author__ = "guokairong"
 
+import sys
+
 from airtest.core.api import *
 
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
@@ -8,9 +10,9 @@ poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=Fa
 
 # 焦点图
 sleep(2)
-poco("com.touchtv.leizhou:id/img").click()
+poco(sys.argv[1]+":id/img").click()
 sleep(3)
-poco("com.touchtv.leizhou:id/back").click()
+keyevent("KEYCODE_BACK")
 sleep(2)
 poco.stop_running()
 

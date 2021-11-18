@@ -1,6 +1,8 @@
 # -*- encoding=utf8 -*-
 __author__ = "guokairong"
 
+import sys
+
 from airtest.core.api import *
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
@@ -68,8 +70,8 @@ else:
 
 poco("ico_share_weibo").click()
 sleep(5)
-if poco("com.touchtv.leizhou:id/tv_title").exists():
-    poco("com.touchtv.leizhou:id/tv_ok").click()
+if poco(sys.argv[1]+":id/tv_title").exists():
+    poco(sys.argv[1]+":id/tv_ok").click()
     poco("com.android.packageinstaller:id/permission_allow_button").click()
 else:
     pass

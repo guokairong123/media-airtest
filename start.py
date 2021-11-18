@@ -3,6 +3,7 @@ import os
 import shutil
 from argparse import *
 import jinja2
+from airtest.cli.parser import runner_parser
 from airtest.cli.runner import AirtestCase
 from airtest.cli.runner import run_script
 from airtest.core.android import adb
@@ -54,9 +55,13 @@ class Start(AirtestCase):
             else:
                 os.makedirs(log)
                 print(str(log) + ' is created')
+            #namespace = Namespace(device=device, compress=10, no_image=None, log=log, recording=None, script=script)
+            #args = ap.parse_args(namespace=namespace)
+            #args = ap.parse_args()
             # 命令行参数，解析获得后的数据格式Namespace(device=device, log=log, recording=None, script=script)
-            # python -m airtest-media run /Users/guokairong/Downloads/airtest-media/news1.air  --device Android://127.0.0.1:5037/emulator-5554  --log "/Users/guokairong/Downloads/airtest-media/log/news1"
+            #python -m airtest-media run /Users/guokairong/Downloads/airtest-media/news1.air  --device Android://127.0.0.1:5037/emulator-5554  --log "/Users/guokairong/Downloads/airtest-media/log/news1"
             args = Namespace(device=device, compress=10, no_image=None, log=log, recording=None, script=script)
+            print("args是什么:" + str(args))
             try:
                 sleep(3)
                 run_script(args, AirtestCase)
