@@ -26,7 +26,9 @@ def search(element):
 # 新闻
 sleep(3)
 poco(text="多种类型文章").click()
-search("f829f1e5f2c7ab2bad99403eb18ab898").click()
+search("文章配图")
+touch(Template(r"tpl1646295193744.png", record_pos=(-0.001, -0.052), resolution=(1080, 2340)))
+
 sleep(2)
 try:
     assert_exists(Template(r"tpl1625473999706.png", record_pos=(-0.324, -0.182), resolution=(720, 1280)), "图片链接-新闻")
@@ -35,7 +37,10 @@ except:
 
 keyevent("KEYCODE_BACK")
 # 直播
-search("732643").click()
+swipe(start_pt, end_pt)
+sleep(1)
+touch(Template(r"tpl1646295770907.png", record_pos=(0.001, -0.611), resolution=(1080, 2340)))
+
 sleep(5)
 try:
     assert_exists(Template(r"tpl1615171912635.png", record_pos=(0.049, -0.26), resolution=(720, 1280)), "图片链接-直播")
@@ -51,7 +56,8 @@ except:
 keyevent("KEYCODE_BACK")
 
 # 跳转百度
-search("www.baidu").click()
+touch(Template(r"tpl1646295788339.png", record_pos=(0.008, 0.107), resolution=(1080, 2340)))
+
 sleep(2)
 try:
     assert_exists(Template(r"tpl1625624366387.png", record_pos=(-0.015, -0.542), resolution=(720, 1280)), "图片链接-外链")
