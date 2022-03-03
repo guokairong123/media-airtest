@@ -15,16 +15,14 @@ width, height = device().get_current_resolution()
 start_pt = (width * 0.5, height * 0.9)
 end_pt = (width * 0.5, height * 0.1)
 swipe(start_pt, end_pt)
-poco(text="民声热线0629").click()
+poco(text="民声热线0818").click()
 sleep(2)
-assert_exists(Template(r"tpl1637741083900.png", record_pos=(0.006, 0.278), resolution=(720, 1280)), "图文直播")
-
+assert_exists(Template(r"tpl1637216117183.png", record_pos=(0.0, 0.271), resolution=(720, 1280)), "图文直播")
 
 # 播放器收起
 poco(sys.argv[1] + ":id/iv_expand").click()
 sleep(3)
-assert_exists(Template(r"tpl1637741101969.png", record_pos=(0.006, -0.715), resolution=(720, 1280)), "播放器收起")
-
+assert_exists(Template(r"tpl1637216171555.png", record_pos=(-0.032, -0.722), resolution=(720, 1280)), "播放器收起")
 
 # 播放器展开
 poco(sys.argv[1] + ":id/iv_expand").click()
@@ -33,10 +31,7 @@ assert_exists(Template(r"tpl1625475633677.png", record_pos=(0.438, -0.261), reso
 sleep(3)
 
 # 点赞
-if poco(text="聊天室").exists():
-    poco(text="聊天室").click()
-else:
-    poco(text="互动").click()
+poco(text="聊天室").click()
 sleep(2)
 touch((360, 900), times=20, duration=0.2)
 
@@ -59,7 +54,7 @@ else:
     poco(sys.argv[1] + ":id/tv_dingyue").click()
 sleep(1)
 if poco(sys.argv[1] + ":id/tv_remind").exists():
-    poco(sys.argv[1] + ":id/tv_remind").click()
+    poco(sys.argv[1] + ":id/tv_dingyue").click()
 sleep(1)
 poco(sys.argv[1] + ":id/rl_more").click()
 try:
@@ -72,4 +67,3 @@ keyevent("KEYCODE_BACK")
 sleep(3)
 keyevent("KEYCODE_BACK")
 poco.stop_running()
-

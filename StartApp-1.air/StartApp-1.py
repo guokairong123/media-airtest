@@ -35,17 +35,11 @@ except:
 
 # 广告跳过
 poco(sys.argv[1]+":id/circleProgressbar").click()
-# 更新提示
-if poco(sys.argv[1]+":id/positive").exists():
-    poco(sys.argv[1]+":id/negative").click()
-    sleep(2)
 try:
-    assert_exists(Template(r"tpl1637224702156.png", record_pos=(-0.396, 0.849), resolution=(720, 1280)), "进入首页")
-
+    assert_exists(Template(r"tpl1625473069594.png", record_pos=(0.011, -0.76), resolution=(720, 1280)), "进入首页")
 except:
     pass
 poco.stop_running()
 
 
 
-poco("com.touchtv.sihui:id/positive")

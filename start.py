@@ -1,4 +1,3 @@
-# -*- encoding=utf8 -*-
 import io
 import os
 import shutil
@@ -8,7 +7,6 @@ from airtest.cli.parser import runner_parser
 from airtest.cli.runner import AirtestCase
 from airtest.cli.runner import run_script
 from airtest.core.android import adb
-from airtest.core.android.adb import ADB
 from airtest.core.api import sleep
 from airtest.core.helper import *
 
@@ -98,9 +96,6 @@ class Start(AirtestCase):
 if __name__ == '__main__':
     test = Start()
     # 连接的设备
-    adb = ADB()
-    deviceslists = adb.devices()
-    print(deviceslists)
     device = ['Android://127.0.0.1:5037/emulator-5554']
     # 项目根目录
     test.run('/Users/guokairong/Downloads/media-airtest', device)
