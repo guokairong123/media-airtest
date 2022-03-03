@@ -18,7 +18,7 @@ assert_exists(Template(r"tpl1626421304787.png", record_pos=(0.004, -0.042), reso
 
 
 swipe(start_pt, end_pt)
-if exists(Template(r"tpl1626422941653.png", record_pos=(0.013, 0.044), resolution=(720, 1280))):
+if exists(Template(r"tpl1626422941653.png", threshold=0.9, record_pos=(0.013, 0.044), resolution=(720, 1280))):
     print("今天已投票")
 else:
 
@@ -30,5 +30,6 @@ sleep(2)
 touch(Template(r"tpl1626423045481.png", record_pos=(-0.003, 0.386), resolution=(720, 1280)))
 assert_exists(Template(r"tpl1626423064084.png", record_pos=(0.01, 0.386), resolution=(720, 1280)), "新闻内——点赞成功")
 poco.stop_running()
+
 
 

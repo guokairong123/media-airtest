@@ -17,6 +17,10 @@ def logout():
 
 
 poco(sys.argv[1]+":id/top_userHead").click()
+if poco(sys.argv[1]+":id/tv_title").exists():
+    poco(sys.argv[1]+":id/tv_title").click()
+else:
+    pass
 if poco(sys.argv[1]+":id/userName_nologin").exists():
     pass
 else:
@@ -85,7 +89,9 @@ poco(sys.argv[1]+":id/checkbox").click()
 poco(sys.argv[1]+":id/btn_login").click()
 sleep(2)
 try:
-    assert_exists(Template(r"tpl1625646326839.png", record_pos=(-0.001, -0.637), resolution=(720, 1280)), "手机号登录")
+    assert_not_exists(Template(r"tpl1637301713010.png", record_pos=(0.028, -0.178), resolution=(720, 1280)), "手机号登录")
+
+
 except:
     print("手机号登录失败")
 if poco(text="完善个人信息，让大家更懂你").exists():

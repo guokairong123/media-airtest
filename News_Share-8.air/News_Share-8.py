@@ -36,7 +36,8 @@ poco(text="我的电脑").wait_for_appearance(timeout=20)
 poco(text="我的电脑").click()
 poco("android.widget.FrameLayout").offspring("com.tencent.mobileqq:id/dialogRightBtn").click()
 try:
-    assert_exists(Template(r"tpl1615172993000.png", record_pos=(-0.001, 0.021), resolution=(720, 1280)), "QQ分享")
+    assert_exists(Template(r"tpl1637306271119.png", record_pos=(-0.014, -0.01), resolution=(720, 1280)), "QQ分享成功")
+
 except:
     print("分享失败")
 
