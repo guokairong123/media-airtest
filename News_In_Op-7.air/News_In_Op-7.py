@@ -9,6 +9,7 @@ poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=Fa
 
 
 # 一直滑动直到元素出现
+ST.FIND_TIMEOUT_TMP = 1
 width, height = device().get_current_resolution()
 start_pt = (width*0.5, height*0.9)
 end_pt = (width*0.5, height*0.1)
@@ -16,19 +17,15 @@ end_pt = (width*0.5, height*0.1)
 
 def search(element):
     for i in range(10):
-        if poco(element).exists():
-            return poco(element)
+        if exists(element):
+            return touch(element)
         else:
             swipe(start_pt, end_pt)
-            sleep(1)
-
 
 # 新闻
 sleep(3)
 poco(text="多种类型文章").click()
-search("文章配图")
-touch(Template(r"tpl1646295193744.png", record_pos=(-0.001, -0.052), resolution=(1080, 2340)))
-
+search(Template(r"tpl1643426375077.png", record_pos=(0.008, 0.002), resolution=(1080, 2340)))
 sleep(2)
 try:
     assert_exists(Template(r"tpl1625473999706.png", record_pos=(-0.324, -0.182), resolution=(720, 1280)), "图片链接-新闻")
@@ -37,9 +34,7 @@ except:
 
 keyevent("KEYCODE_BACK")
 # 直播
-swipe(start_pt, end_pt)
-sleep(1)
-touch(Template(r"tpl1646295770907.png", record_pos=(0.001, -0.611), resolution=(1080, 2340)))
+search(Template(r"tpl1643440773900.png", record_pos=(0.004, 0.448), resolution=(1080, 2340)))
 
 sleep(5)
 try:
@@ -56,7 +51,7 @@ except:
 keyevent("KEYCODE_BACK")
 
 # 跳转百度
-touch(Template(r"tpl1646295788339.png", record_pos=(0.008, 0.107), resolution=(1080, 2340)))
+search(Template(r"tpl1643441298985.png", threshold=0.9, record_pos=(0.028, -0.197), resolution=(1080, 2340)))
 
 sleep(2)
 try:
@@ -119,3 +114,6 @@ except:
     pass
 keyevent("KEYCODE_BACK")
 poco.stop_running()
+
+
+
