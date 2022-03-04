@@ -17,15 +17,18 @@ end_pt = (width*0.5, height*0.1)
 
 def search(element):
     for i in range(10):
-        if exists(element):
-            return touch(element)
+        if poco(element).exists():
+            return poco(element)
         else:
             swipe(start_pt, end_pt)
+            sleep(1)
 
 # 新闻
 sleep(3)
 poco(text="多种类型文章").click()
-search(Template(r"tpl1643426375077.png", record_pos=(0.008, 0.002), resolution=(1080, 2340)))
+search("文章配图")
+touch(Template(r"tpl1646361269868.png", record_pos=(-0.003, -0.145), resolution=(1080, 2340)))
+
 sleep(2)
 try:
     assert_exists(Template(r"tpl1625473999706.png", record_pos=(-0.324, -0.182), resolution=(720, 1280)), "图片链接-新闻")
@@ -34,7 +37,10 @@ except:
 
 keyevent("KEYCODE_BACK")
 # 直播
-search(Template(r"tpl1643440773900.png", record_pos=(0.004, 0.448), resolution=(1080, 2340)))
+swipe(start_pt, end_pt)
+sleep(1)
+touch(Template(r"tpl1646361310704.png", record_pos=(0.008, 0.553), resolution=(1080, 2340)))
+
 
 sleep(5)
 try:
@@ -51,7 +57,8 @@ except:
 keyevent("KEYCODE_BACK")
 
 # 跳转百度
-search(Template(r"tpl1643441298985.png", threshold=0.9, record_pos=(0.028, -0.197), resolution=(1080, 2340)))
+touch(Template(r"tpl1646361355134.png", record_pos=(-0.001, 0.064), resolution=(1080, 2340)))
+
 
 sleep(2)
 try:
